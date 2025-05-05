@@ -30,3 +30,68 @@
     <url-pattern>/reg</url-pattern>
   </servlet-mapping>
 </web-app>
+<!-- 🧾 Purpose of web.xml (Deployment Descriptor)
+The web.xml file is used in Java EE (now Jakarta EE) web applications to configure components like servlets, filters, listeners, and default resources. It tells the application server how to route incoming HTTP requests and which classes (like servlets) should handle them.
+
+It is essentially a bridge between your front-end (like HTML forms) and backend Java servlets.
+
+🔹 Servet Definition Explained
+xml
+Copy
+Edit
+<servlet>
+  <description></description>
+  <display-name>LoginServlet</display-name>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>login.LoginServlet</servlet-class>
+</servlet>
+Breakdown:
+<servlet> tag defines a servlet component.
+
+<display-name> is an optional human-readable name.
+
+<servlet-name> is the logical name used to refer to this servlet (used in mapping).
+
+<servlet-class> tells the server which Java class to load and instantiate.
+✅ Class Name: login.LoginServlet
+This means your Java servlet class is in the login package and the class name is LoginServlet.
+
+➡️ This defines the servlet, but it doesn’t tell the server when to run it yet.
+🔹 Servlet Mapping
+xml
+Copy
+Edit
+<servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+</servlet-mapping>
+Breakdown:
+<servlet-name> matches the one defined above.
+
+<url-pattern> defines the URL that will trigger this servlet.
+
+✅ So, when the user accesses http://yourdomain.com/login, the server invokes the login.LoginServlet class.
+
+🔹 Second Servlet: Registration
+xml
+Copy
+Edit
+<servlet>
+  <description></description>
+  <display-name>RegServlet</display-name>
+  <servlet-name>RegServlet</servlet-name>
+  <servlet-class>login.RegServlet</servlet-class>
+</servlet>
+✅ Class Name: login.RegServlet
+➡️ This is another servlet for handling registration, defined similarly.
+
+And its mapping:
+xml
+Copy
+Edit
+<servlet-mapping>
+  <servlet-name>RegServlet</servlet-name>
+  <url-pattern>/reg</url-pattern>
+</servlet-mapping>
+✅ URL Pattern /reg triggers the login.RegServlet. 
+-->

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Codeforsuccess</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background: linear-gradient(-45deg, #74ebd5, #acb6e5, #fcb045, #fd1d1d);
+      background-size: 400% 400%;
+      animation: gradientFlow 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2em;
+      }
+      a {
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to <br>CodeForSuccess</h1>
+  <div class="button-container">
+    <a href="login.html">Login</a>
+    <a href="reg.html">Register</a>
+  </div>
+
+</body>
+</html>

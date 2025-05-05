@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	public static String  LOAD_DRIVER="com.mysql.cj.jdbc.Driver";
-    public static String  URL="jdbc:mysql://localhost:3306/userdb";
+    public static String  URL="jdbc:mysql://localhost:3306/casinoroyaledb";
     public static String  PASSWORD="ShiAa#$156A3&@";
     public static String  USERNAME="root";
     Connection connection;

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2.5em;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-size: 1em;
+      font-weight: 500;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 8px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      width: 100%;
+      background-color: #00b894;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #019875;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .login-container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form method="POST" action="login">
+      <label for="uname">Username</label>
+      <input type="text" id="uname" name="uname" placeholder="Enter your username" required />
+
+      <label for="pword">Password</label>
+      <input type="password" id="pword" name="pword" placeholder="Enter your password" required />
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</body>
+</html>

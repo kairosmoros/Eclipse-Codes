@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2, #ff6a00, #ee0979);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #fff;
+      font-size: 2.8em;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #eee;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      form {
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form method="POST" action="reg">
+    <h1>Register Now</h1>
+
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="John" required>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Doe" required>
+
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="uname" placeholder="johndoe123" required>
+
+    <label for="pword">Password:</label>
+    <input type="password" id="pword" name="pword" placeholder="●●●●●●●●" required>
+
+    <input type="submit" value="Register">
+  </form>
+
+</body>
+</html>
