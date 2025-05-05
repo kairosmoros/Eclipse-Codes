@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>HtmlDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <!-- ➡️ Defines a list of default pages (welcome files) when a user visits the root URL of your web app (e.g., http://localhost:8080/YourAppName/).
+The server looks for these files in order and serves the first one it finds. -->
+  </welcome-file-list>
+<servlet>
+<description></description><!-- Optional, usually used to describe the Servlet. -->
+<display-name>HtmlDemo</display-name> <!-- Again, a human-readable name (for UI tools). -->
+<servlet-name>HtmlDemo</servlet-name> <!-- A unique identifier for this Servlet. -->
+<servlet-class>htmldemo.HtmlDemo</servlet-class><!-- The fully qualified class name of your servlet Java class (i.e., htmldemo.HtmlDemo). -->
+<!-- So this tells the server, "I have a servlet named HtmlDemo and the class that implements it is htmldemo.HtmlDemo." -->
+</servlet>
+<servlet-mapping>
+<servlet-name>HtmlDemo</servlet-name>
+<url-pattern>/test</url-pattern>
+<!-- ➡️ This block maps the servlet to a URL.
+
+When someone visits http://localhost:8080/YourAppName/test, this tells the server to invoke the HtmlDemo servlet.
+In other words 
+"This servlet name (HtmlDemo) is implemented by the class htmldemo.HtmlDemo."
+
+"When someone visits /test, use the servlet with the name HtmlDemo."
+ -->
+</servlet-mapping>
+
+
+</web-app>

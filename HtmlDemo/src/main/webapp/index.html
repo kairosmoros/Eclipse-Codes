@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>eclipse</title>
+        <style>
+            body{
+                text-align: center;
+                background-color: rgb(233, 233, 101);
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="test">
+           <h1>Welcome to MI6</h1>
+            <label for=""> Username : </label> <input type="text" name="uname"><br><br>
+            <input type="submit"></input><br><br>
+            <label for="accept">Accept Terms and Conditions</label> <!-- Here the even if you click on the text Accept Terms and Conditions it will click on the checkbox but if you try to click on the the text without label then it will not work it will work only if you put it inside the label-->
+            <input type="checkbox" id="accept" required><!--  this required will force the user to check the box then only can enter the submit button  -->
+        </form>
+        </body>
+</html>
