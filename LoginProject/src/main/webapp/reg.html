@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>eclipse</title>
+        <style>
+            body{
+                text-align: center;
+                background-color:bisque;
+            }
+        </style>
+    </head>
+    <body text="green">
+        <form action="reg" method="POST"> 
+        
+        
+        
+        <!-- <form action="reg" method="POST">
+✅ What it means:
+<form>: This tag creates a form on the web page — a section where the user can enter data (like username, password, etc.).
+
+action="reg":
+
+This tells the browser where to send the form data when the user hits the Submit button.
+
+"reg" usually maps to a servlet (or a controller) that will handle the form submission — like RegisterServlet.
+
+method="POST":
+
+This specifies how the form data should be sent to the server.
+
+POST means: Send the data in the body of the HTTP request (used for sensitive data or when inserting data like registration).
+
+Alternative is GET, which sends data in the URL, and is less secure.
+
+🧠 Real-life analogy:
+Think of it like this:
+
+The form is a letter.
+
+The action is the address where you’re sending the letter.
+
+The method is whether you send it by courier (POST) or postcard (GET).
+
+💡 Example:
+html
+Copy
+Edit
+<form action="reg" method="POST">
+  <input type="text" name="uname" />
+  <input type="password" name="pword" />
+  <input type="submit" value="Register" />
+</form>
+🡺 When you submit, the browser sends the data like:
+
+ini
+Copy
+Edit
+uname=prashant&pword=1234
+...to the servlet mapped to /reg (in your web.xml or with @WebServlet("/reg")) -->     
+
+
+            <h1>Registration Form </h1>
+           <label for="">First Name:</label> <input type="text" name ="fname"><br><br>
+           <label for="">Last Name: </label> <input type="text" name="lname"><br><br>
+           <label for="">User Name:</label> <input type="text" name ="uname"><br><br>
+           <label for="">Password:</label> <input type="password" name ="pword"><br><br>
+          
+           <input type="submit">
+        </form>
+    </body>
+ </html>

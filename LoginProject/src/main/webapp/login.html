@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>eclipse</title>
+        <style>
+            body{
+                text-align: center;
+                background-color: rgb(121, 164, 146);
+            }
+        </style>
+    </head>
+    <body text="black">
+        <form  method="POST" action="login"><!--here in the action field we have written login it will go to login servlet since servlet name is login-->
+<!--🧩 1. action="login"
+This tells the browser where to send the form data when the user clicks "Submit".
+
+"login" is a URL pattern.
+
+The browser sends the form data to the server at /login.
+
+On the server side, Tomcat looks in web.xml or @WebServlet("/login") to find the matching servlet.
+
+💡 Real Life:
+You're posting your information to the "login counter" — and Tomcat knows which servlet handles that counter.-->            
+            <h1>Login Form </h1>
+           <label for="">Username:</label> <input type="text" name ="uname"><br><!--in the place of Username you can use any thing like sname, myname it is just to hold the text you are writing-->
+           <label for="">Password: </label> <input type="password" name="pword"><br><br>
+            <input type="submit">
+        </form>
+    </body>
+ </html>
